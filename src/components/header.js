@@ -1,9 +1,10 @@
 import React from 'react'
-import { Menu, Group, Center, Burger, Container, useStyles } from '@mantine/core';
+import { Menu, Group, Center, Burger, Container, useStyles, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
 // import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './index.module.css';
+import Logo from '../assets/bashLogo.png'
 
 const links = [
     { link: '/about', label: 'Features' },
@@ -73,7 +74,7 @@ export const Header = () => {
         <header className={classes.header}>
             <Container size="md">
                 <div className={classes.inner}>
-                    {/* <MantineLogo size={28} /> */}
+                    <Image src={Logo} size={16} />
                     <Group gap={5} visibleFrom="sm">
                         {items}
                     </Group>
